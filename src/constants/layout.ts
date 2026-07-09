@@ -1,0 +1,16 @@
+export const LAYOUT = {
+  screenPaddingHorizontal: 20,
+  screenPaddingTop: 28,
+  screenPaddingBottom: 40,
+  sectionGap: 14,
+  cardPadding: 18,
+  cardBorderRadius: 24,
+  heroBorderRadius: 28,
+  adCardBorderRadius: 24,
+  imageBannerHeight: 410,
+  headerMarginBottom: 18,
+  attendanceDayCellWidthPercent: '14.285%',
+  attendanceGridRowGap: 8,
+  tabBarHeight: 64,
+  donationThumbnailSize: 56,
+} as const;
