@@ -9,7 +9,7 @@ export const screenStyles = StyleSheet.create({
   card: {
     padding: LAYOUT.cardPadding,
     borderRadius: LAYOUT.cardBorderRadius,
-    backgroundColor: colors.surface,
+    backgroundColor: colors.surfaceTranslucent,
   },
   heroCard: {
     padding: LAYOUT.cardPadding + 2,
@@ -20,7 +20,7 @@ export const screenStyles = StyleSheet.create({
     borderRadius: LAYOUT.adCardBorderRadius,
     borderWidth: 1,
     borderColor: colors.border,
-    backgroundColor: colors.surface,
+    backgroundColor: colors.surfaceTranslucent,
     overflow: 'hidden',
   },
   adSlot: {

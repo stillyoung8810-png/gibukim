@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     paddingVertical: 40,
     paddingHorizontal: 16,
     borderRadius: 24,
-    backgroundColor: colors.surface,
+    backgroundColor: colors.surfaceTranslucent,
   },
   stateEmoji: {
     fontSize: 28,

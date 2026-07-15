@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
   listCard: {
     padding: 18,
     borderRadius: 24,
-    backgroundColor: colors.surface,
+    backgroundColor: colors.surfaceTranslucent,
   },
   listTitle: {
     marginBottom: 12,

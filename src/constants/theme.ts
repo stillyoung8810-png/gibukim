@@ -12,6 +12,8 @@ export const colors = {
   backgroundMuted: '#F8D9B0',
   /** 카드·버튼 면 */
   surface: '#FFFFFF',
+  /** 피치 배경 위에 올리는 큰 카드 면 */
+  surfaceTranslucent: 'rgba(255, 255, 255, 0.8)',
   /** 보조 면 (공지·트랙 등) */
   surfaceMuted: '#F5E6D3',
 
