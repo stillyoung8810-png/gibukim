@@ -1,13 +1,13 @@
-// gibukim 전용 보상형 광고 슬롯 — 배포 전 Apps in Toss 콘솔 ID로 교체
-export const GIBUKIM_BOX_OPEN_OPPORTUNITY_REWARD_AD_GROUP_ID = 'ait.v2.live.placeholder-box-open';
+// gibukim 전용 보상형 광고 슬롯
+export const GIBUKIM_BOX_OPEN_OPPORTUNITY_REWARD_AD_GROUP_ID = 'ait.v2.live.6c848d72c1484c9e';
 export const GIBUKIM_BOX_OPEN_OPPORTUNITY_SECONDARY_REWARD_AD_GROUP_ID =
-  'ait.v2.live.placeholder-box-open-secondary';
+  'ait.v2.live.f5482ae732bc4af3';
 export const GIBUKIM_BOX_OPEN_OPPORTUNITY_REWARD_AD_GROUP_IDS = [
   GIBUKIM_BOX_OPEN_OPPORTUNITY_REWARD_AD_GROUP_ID,
   GIBUKIM_BOX_OPEN_OPPORTUNITY_SECONDARY_REWARD_AD_GROUP_ID,
 ] as const;
 
-export const GIBUKIM_BOOST_REWARD_AD_GROUP_ID = 'ait.v2.live.placeholder-boost';
+export const GIBUKIM_BOOST_REWARD_AD_GROUP_ID = 'ait.v2.live.fa0ae4cf84aa4af0';
 
 export const gibukimRewardAdConfig = {
   boxOpenOpportunityAdGroupIds: GIBUKIM_BOX_OPEN_OPPORTUNITY_REWARD_AD_GROUP_IDS,
