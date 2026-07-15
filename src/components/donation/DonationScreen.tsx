@@ -42,7 +42,7 @@ export function DonationScreen({
         </View>
       </View>
 
-      <View style={styles.listCard}>
+      <View style={[styles.listCard, screenStyles.cardShadow]}>
         <Text style={styles.listTitle}>기부 목록</Text>
         {renderListBody({
           listStatus,

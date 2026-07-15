@@ -11,9 +11,11 @@ type BannerAdCardProps = {
 
 export function BannerAdCard({ adGroupId, slotStyle }: BannerAdCardProps) {
   return (
-    <View style={screenStyles.adCard}>
-      <View style={[screenStyles.adSlot, slotStyle]}>
-        <InlineAd adGroupId={adGroupId} variant="card" impressFallbackOnMount={true} />
+    <View style={screenStyles.adCardShadow}>
+      <View style={screenStyles.adCard}>
+        <View style={[screenStyles.adSlot, slotStyle]}>
+          <InlineAd adGroupId={adGroupId} variant="card" impressFallbackOnMount={true} />
+        </View>
       </View>
     </View>
   );

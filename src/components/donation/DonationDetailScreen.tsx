@@ -32,14 +32,14 @@ export function DonationDetailScreen({
       </Pressable>
 
       {detailStatus === 'loading' || (detailStatus === 'idle' && campaign == null) ? (
-        <View style={styles.stateBlock}>
+        <View style={[styles.stateBlock, screenStyles.cardShadow]}>
           <ActivityIndicator color={colors.primary} />
           <Text style={styles.stateText}>{donationMessages.detailLoading}</Text>
         </View>
       ) : null}
 
       {detailStatus === 'failed' ? (
-        <View style={styles.stateBlock}>
+        <View style={[styles.stateBlock, screenStyles.cardShadow]}>
           <Text style={styles.stateEmoji}>💛</Text>
           <Text style={styles.stateTitle}>{donationMessages.detailLoadFailed}</Text>
           {onRetry == null ? null : (

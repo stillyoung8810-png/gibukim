@@ -2,19 +2,34 @@ import { StyleSheet } from 'react-native';
 
 import { LAYOUT, colors } from '../../constants/theme';
 
+const softCardShadow = {
+  shadowColor: colors.text,
+  shadowOffset: { width: 0, height: 6 },
+  shadowOpacity: 0.08,
+  shadowRadius: 18,
+  elevation: 3,
+};
+
 export const screenStyles = StyleSheet.create({
   section: {
     gap: LAYOUT.sectionGap,
   },
+  cardShadow: softCardShadow,
   card: {
     padding: LAYOUT.cardPadding,
     borderRadius: LAYOUT.cardBorderRadius,
     backgroundColor: colors.surfaceTranslucent,
+    ...softCardShadow,
   },
   heroCard: {
     padding: LAYOUT.cardPadding + 2,
     borderRadius: LAYOUT.heroBorderRadius,
     backgroundColor: colors.backgroundMuted,
+    ...softCardShadow,
+  },
+  adCardShadow: {
+    borderRadius: LAYOUT.adCardBorderRadius,
+    ...softCardShadow,
   },
   adCard: {
     borderRadius: LAYOUT.adCardBorderRadius,
@@ -33,6 +48,7 @@ export const screenStyles = StyleSheet.create({
     padding: 14,
     borderRadius: 18,
     backgroundColor: colors.surfaceMuted,
+    ...softCardShadow,
   },
   noticeText: {
     fontSize: 12,
