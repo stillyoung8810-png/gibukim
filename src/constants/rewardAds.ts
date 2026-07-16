@@ -8,8 +8,10 @@ export const GIBUKIM_BOX_OPEN_OPPORTUNITY_REWARD_AD_GROUP_IDS = [
 ] as const;
 
 export const GIBUKIM_BOOST_REWARD_AD_GROUP_ID = 'ait.v2.live.fa0ae4cf84aa4af0';
+export const GIBUKIM_ATTENDANCE_REWARD_AD_GROUP_ID = 'ait.v2.live.4b4526067f5f4625';
 
 export const gibukimRewardAdConfig = {
   boxOpenOpportunityAdGroupIds: GIBUKIM_BOX_OPEN_OPPORTUNITY_REWARD_AD_GROUP_IDS,
   boostAdGroupId: GIBUKIM_BOOST_REWARD_AD_GROUP_ID,
+  attendanceAdGroupId: GIBUKIM_ATTENDANCE_REWARD_AD_GROUP_ID,
 } as const;

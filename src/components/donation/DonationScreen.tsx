@@ -1,9 +1,14 @@
 import React from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 
+import {
+  DONATION_BOTTOM_IMAGE_BANNER_AD_GROUP_ID,
+  DONATION_SUMMARY_PHRASE_BANNER_AD_GROUP_ID,
+} from '../../constants/bannerAds';
 import { donationMessages } from '../../constants/donationMessages';
-import { colors } from '../../constants/theme';
+import { LAYOUT, colors } from '../../constants/theme';
 import type { DonationCampaign, LoadStatus, MyDonationSummary } from '../../types/appState';
+import { BannerAdCard } from '../layout/BannerAdCard';
 import { ScreenSection } from '../layout/ScreenSection';
 import { screenStyles } from '../layout/screenStyles';
 import { DonationListItem } from './DonationListItem';
@@ -40,6 +45,10 @@ export function DonationScreen({
             <Text style={styles.summaryValue}>{summary.totalDonatedGold}골드</Text>
           </View>
         </View>
+
+        <View style={styles.adWrap}>
+          <BannerAdCard adGroupId={DONATION_SUMMARY_PHRASE_BANNER_AD_GROUP_ID} />
+        </View>
       </View>
 
       <View style={[styles.listCard, screenStyles.cardShadow]}>
@@ -51,6 +60,11 @@ export function DonationScreen({
           onRetry,
         })}
       </View>
+
+      <BannerAdCard
+        adGroupId={DONATION_BOTTOM_IMAGE_BANNER_AD_GROUP_ID}
+        slotStyle={styles.imageBannerSlot}
+      />
     </ScreenSection>
   );
 }
@@ -158,6 +172,12 @@ const styles = StyleSheet.create({
     fontSize: 22,
     color: colors.accent,
     fontWeight: '900',
+  },
+  adWrap: {
+    marginTop: 14,
+  },
+  imageBannerSlot: {
+    height: LAYOUT.imageBannerHeight,
   },
   listCard: {
     padding: 18,

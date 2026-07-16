@@ -102,6 +102,9 @@ function Page() {
   const boostRewardAdGatewayRef = useRef<RewardAdGateway>(
     createTossRewardAdGateway(gibukimRewardAdConfig.boostAdGroupId),
   );
+  const attendanceRewardAdGatewayRef = useRef<RewardAdGateway>(
+    createTossRewardAdGateway(gibukimRewardAdConfig.attendanceAdGroupId),
+  );
   const tossPointPromotionGatewayRef = useRef<TossPointPromotionGateway | null>(createPromotionGateway());
   const activeConversionRef = useRef(appState.activeConversion);
   const serverNowMsRef = useRef(appState.serverNowMs);
@@ -558,6 +561,7 @@ function Page() {
     return () => {
       boxOpenOpportunityRewardAdGatewayRef.current.dispose();
       boostRewardAdGatewayRef.current.dispose();
+      attendanceRewardAdGatewayRef.current.dispose();
     };
   }, []);
 
@@ -941,11 +945,19 @@ function Page() {
             ? prev.attendance.attendedDatesKst
             : [...prev.attendance.attendedDatesKst, result.attendanceDateKst],
         },
+        isAttending: false,
+        isRewardAdBusy: true,
         bannerMessage: `출석 완료! ${result.creditedGold}골드를 받았어요.`,
       }));
+
+      // 출석 골드는 이미 지급됨. 전면 광고 실패/닫힘과 무관하게 보상은 유지합니다.
+      const loadResult = await attendanceRewardAdGatewayRef.current.load();
+      if (loadResult.type === 'loaded') {
+        await attendanceRewardAdGatewayRef.current.show();
+      }
     } finally {
       actionInFlightRef.current = false;
-      setAppState((prev) => ({ ...prev, isAttending: false }));
+      setAppState((prev) => ({ ...prev, isAttending: false, isRewardAdBusy: false }));
     }
   }
 
